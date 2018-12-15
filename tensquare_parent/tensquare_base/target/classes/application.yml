@@ -12,3 +12,4 @@ spring:
     database: MySQl
     show-sql: true
     generate-ddl: true
+
