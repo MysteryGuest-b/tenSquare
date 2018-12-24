@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 /**
  * 控制器层
@@ -96,6 +97,16 @@ public class EnterpriseController {
 	public Result delete(@PathVariable String id ){
 		enterpriseService.deleteById(id);
 		return new Result(true,StatusCode.OK,"删除成功");
+	}
+
+	/**
+	 *
+	 * @return
+	 */
+	@RequestMapping("/search/hotlist")
+	public Result findHotList(){
+		List<Enterprise> list = enterpriseService.findHotList();
+		return new Result(true,StatusCode.OK,"查询热门企业成功",list);
 	}
 	
 }

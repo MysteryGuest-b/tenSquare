@@ -102,7 +102,6 @@ public class EnterpriseService {
 	public void deleteById(String id) {
 		enterpriseDao.deleteById(id);
 	}
-
 	/**
 	 * 动态条件构建
 	 * @param searchMap
@@ -159,4 +158,7 @@ public class EnterpriseService {
 
 	}
 
+    public List<Enterprise> findHotList() {
+		return enterpriseDao.findByIshot("1");
+    }
 }

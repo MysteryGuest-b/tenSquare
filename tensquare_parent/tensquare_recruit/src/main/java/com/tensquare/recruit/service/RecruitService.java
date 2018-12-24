@@ -167,7 +167,14 @@ public class RecruitService {
 
 			}
 		};
+	}
 
+	public List<Recruit> findTop4ByState(){
+		return recruitDao.findTop4ByState("2");
+	}
+
+	public List<Recruit> findTop12ByStateOrderByCreateTime(){
+		return recruitDao.findTop12ByStateOrderByCreatetimeDesc("2");
 	}
 
 }
