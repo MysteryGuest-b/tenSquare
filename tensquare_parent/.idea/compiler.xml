@@ -21,6 +21,7 @@
       <module name="tensquare_parent" target="1.8" />
       <module name="tensquare_qa" target="1.8" />
       <module name="tensquare_recruit" target="1.8" />
+      <module name="tensquare_user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
